@@ -1,0 +1,74 @@
+[
+    {
+        "label": "maximum_wealth",
+        "kind": 2,
+        "importPath": "maximum_wealth",
+        "description": "maximum_wealth",
+        "peekOfCode": "def maximum_wealth(accounts):\n    newArr = []\n    for i in range(len(accounts)):\n        newArr.append(sum(accounts[i]))\n    return max(newArr)\naccounts = [[2,8,7],[7,1,3],[1,9,5]]\nprint(maximum_wealth(accounts))",
+        "detail": "maximum_wealth",
+        "documentation": {}
+    },
+    {
+        "label": "accounts",
+        "kind": 5,
+        "importPath": "maximum_wealth",
+        "description": "maximum_wealth",
+        "peekOfCode": "accounts = [[2,8,7],[7,1,3],[1,9,5]]\nprint(maximum_wealth(accounts))",
+        "detail": "maximum_wealth",
+        "documentation": {}
+    },
+    {
+        "label": "running_sum",
+        "kind": 2,
+        "importPath": "running_sum",
+        "description": "running_sum",
+        "peekOfCode": "def running_sum(nums):\n    i = 1\n    newArray = [nums[0]]\n    while i < len(nums):\n        newArray.append(newArray[i-1]+ nums[i])\n        i += 1\n    return newArray\nnums = [3,1,2,10,1]\nprint(running_sum(nums))",
+        "detail": "running_sum",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "running_sum",
+        "description": "running_sum",
+        "peekOfCode": "nums = [3,1,2,10,1]\nprint(running_sum(nums))",
+        "detail": "running_sum",
+        "documentation": {}
+    },
+    {
+        "label": "runningSum_brute_force",
+        "kind": 2,
+        "importPath": "running_sum_v1",
+        "description": "running_sum_v1",
+        "peekOfCode": "def runningSum_brute_force(nums):\n    running_sum = []\n    for i in range(len(nums)):\n        total = sum(nums[:i+1])  # Recomputes sum every time\n        running_sum.append(total)\n    return running_sum\n# Example\nnums = [1, 2, 3, 4]\nprint(runningSum_brute_force(nums))  # Output: [1, 3, 6, 10]",
+        "detail": "running_sum_v1",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "running_sum_v1",
+        "description": "running_sum_v1",
+        "peekOfCode": "nums = [1, 2, 3, 4]\nprint(runningSum_brute_force(nums))  # Output: [1, 3, 6, 10]",
+        "detail": "running_sum_v1",
+        "documentation": {}
+    },
+    {
+        "label": "runningSum_optimized",
+        "kind": 2,
+        "importPath": "running_sum_v2",
+        "description": "running_sum_v2",
+        "peekOfCode": "def runningSum_optimized(nums):\n    for i in range(1, len(nums)):  # Single loop O(n)\n        nums[i] += nums[i-1]  # Modify nums in-place\n    return nums\n# Example\nnums = [1, 2, 3, 4]\nprint(runningSum_optimized(nums))  # Output: [1, 3, 6, 10]",
+        "detail": "running_sum_v2",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "running_sum_v2",
+        "description": "running_sum_v2",
+        "peekOfCode": "nums = [1, 2, 3, 4]\nprint(runningSum_optimized(nums))  # Output: [1, 3, 6, 10]",
+        "detail": "running_sum_v2",
+        "documentation": {}
+    }
+]
